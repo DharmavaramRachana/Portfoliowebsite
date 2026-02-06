@@ -1,0 +1,136 @@
+.about {
+  padding: 80px 10%;
+  background: #0a1a33;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Image */
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImg {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #19376d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.profileImg:hover {
+  transform: scale(1.05);
+}
+
+/* Text */
+
+.text {
+  flex: 2;
+}
+
+.text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+/* Typing intro effect */
+
+.typing {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #4da3ff;
+}
+
+/* Skill cards */
+
+.cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #19376d;
+  padding: 20px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .profileImg {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 830px) {
+  .about {
+    padding: 60px 6%;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .profileImg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text h2 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .typing {
+    font-size: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

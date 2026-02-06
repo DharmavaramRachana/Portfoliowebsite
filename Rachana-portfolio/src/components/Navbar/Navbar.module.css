@@ -1,0 +1,77 @@
+@import "../../vars.css";
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Menu wrapper */
+.menu {
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Desktop: hide hamburger */
+.menuBtn {
+  display: none;
+  width: 36px;
+  cursor: pointer;
+}
+
+/* Desktop: show links */
+.menuItems {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 22px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 1024px) {
+
+  /* Show hamburger */
+  .menuBtn {
+    display: block;
+  }
+
+  /* Hide desktop links by default */
+  .menuItems {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    flex-direction: column;
+    gap: 14px;
+
+    padding: 20px;
+    border-radius: 12px;
+    background: #19376d;
+  }
+
+  /* Show dropdown when clicked */
+  .menuOpen {
+    display: flex;
+  }
+}
